@@ -1,28 +1,19 @@
-import React, {useState} from "react";
+import HomePage from "./Home-page";
+import {BrowserRouter, Route, Routes} from "react-router-dom";
+import Page from "./Page";
 
 
-const App = () => {
-    const [counter,setCounter] = useState(0);
-    const [firstInput, setFirstInput] = useState(0);
-    const [secondInput, setSecondInput] = useState(0);
-
-
-    const  handleIncrement =  () => {
-        setCounter(firstInput + secondInput)
-    }
-    const  handleDecrement = () => {
-        setCounter(firstInput - secondInput)
-    }
-
+function App() {
     return (
-        <div>
-            <h1>{counter}</h1>
-            <input type="text" value={firstInput} onChange={(e) => setFirstInput(Number(e.target.value))}/>
-            <input type="text" value={secondInput} onChange={(e) => setSecondInput(Number(e.target.value))}/>
-            <button onClick={handleIncrement}>+</button>
-            <button onClick={handleDecrement}>-</button>
+        <div className={'main-page'}>
+            <BrowserRouter>
+                <Routes>
+                    <Route path='/' element={<HomePage/>} />
+                    <Route path='/page/:name' element={<Page/>} />
+                   
+                </Routes>
+            </BrowserRouter>
         </div>
     );
 }
-
 export default App;

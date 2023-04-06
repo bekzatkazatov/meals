@@ -11,6 +11,61 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
-h1{
-  margin-left: 170px;
+*{
+  padding: 0;
+  margin: 0;
+}
+.container{
+  max-width: 1200px;
+  margin: 0 auto;
+    margin-top: 20px;
+
+
+}
+.main-page{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  background-color: rgba(241, 238, 2, 0.5);
+
+}
+.home{
+  display:flex;
+ justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 15px;
+  width: 30.33%;
+  gap: 20px;
+  background-color: rgba(241, 238, 2, 0.5);
+}
+img{
+  width: 300px;
+}
+a{
+  text-decoration: none;
+  color: black;
+}
+.pageingrid{
+  display: flex;
+  margin-top: 20px;
+
+}
+.textingrid{
+  text-align: center;
+    font-weight: 800;
+
+}
+.texthead{
+  padding-left: 20px;
+  font-family: 'Roboto'
+}
+.imgingrid{
+    width: 100px;
+}
+li{
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+
 }
